@@ -4,24 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <title>MARKETPLACE</title>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const homeLink = document.getElementById('home-link');
+        const productsLink = document.getElementById('products-link');
+        const aboutLink = document.getElementById('about-link');
+        const indicator = document.getElementById('nav-indicator');
+
+        function updateIndicator(activeLink) {
+          const rect = activeLink.getBoundingClientRect();
+          const navRect = activeLink.parentElement.getBoundingClientRect();
+          indicator.style.width = rect.width + 'px';
+          indicator.style.height = rect.height + 'px';
+          indicator.style.left = (rect.left - navRect.left) + 'px';
+          indicator.style.top = (rect.top - navRect.top) + 'px';
+        }
+
+        // Set initial position for Home
+        updateIndicator(homeLink);
+
+        homeLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          updateIndicator(homeLink);
+        });
+
+        productsLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          updateIndicator(productsLink);
+          // Navigate after animation
+          setTimeout(() => {
+            window.location.href = 'Marketpalce.html';
+          }, 300);
+        });
+
+        aboutLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          updateIndicator(aboutLink);
+        });
+      });
+    </script>
 </head>
-<body>
+<body class="bg-[#fff2d6]">
     <!-- HEADER -->
     <!-- Navbar -->
-    <a href="Marketplace.html" class="btn">Lihat Semua Villa</a>
-    <header class="flex justify-between items-center px-8 py-4 bg-white shadow-sm">
-    <div class="flex items-center gap-2">
-      <img src="https://img.icons8.com/emoji/48/box-emoji.png" alt="logo" class="w-8 h-8">
-      <h1 class="text-xl font-bold">Snackes</h1>
-    </div>
     <nav class="flex items-center gap-8 text-sm font-medium">
-      <a href="#" class="text-yellow-500">Home</a>
-      <a href="#" class="hover:text-yellow-600">Marketplace</a>
-      <a href="#" class="hover:text-yellow-600">About Us</a>
+  
+    </nav>
+
+    <header class="flex justify-between items-center px-8 py-4 bg-[#fff2d6] shadow-sm">
+    <div class="flex items-center gap-2">
+      <a href="index.html">
+        <img src="img/LOGOOOO SALOKA.png" alt="logo" class="w-40 h-16">
+      </a>
+
+    </div>
+    <nav class="relative flex items-center gap-8 text-lg font-medium">
+      <a id="home-link" href="#" class="text-black hover:text-gray-700 px-3 py-1 z-10 relative">Home</a>
+      <a id="products-link" href="Marketpalce.html" class="text-black hover:text-gray-700 px-3 py-1 z-10 relative">Products</a>
+      <a id="about-link" href="#" class="text-black hover:text-gray-700 px-3 py-1 z-10 relative">About Us</a>
+      <div id="nav-indicator" class="absolute bg-[#DAA520] rounded-full transition-all duration-300 ease-in-out"></div>
     </nav>
     <div class="flex items-center gap-4">
-      <input type="text" placeholder="Search" class="border border-gray-300 rounded-full px-3 py-1 text-sm focus:outline-none" />
+      <input type="text" placeholder="Search" class="border border-gray-300 rounded-full px-3 py-1 text-sm focus:outline-none bg-white" />
       <button class="text-gray-600 hover:text-yellow-600">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18M3 12h18M3 21h18" />
@@ -73,13 +119,13 @@
       <span class="text-purple-600">Pilihan Terpercaya.</span>
     </h2>
     <p class="text-gray-600 mt-4"> Semakin lama disini, di jamin makin bingung milih.</p>
-    <button class="mt-8 px-6 py-3 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-full shadow-md hover:opacity-90 transition">
+    <a href="Marketpalce.html" class="mt-8 px-6 py-3 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-full shadow-md hover:opacity-90 transition inline-block">
       Jelajahi Seleramu sekarang!
-    </button>
+    </a>
   </section>
 
   <!-- Popular Products Section -->
-<section class="px-8 py-12 bg-white">
+<section class="px-8 py-12 bg-[#fff2d6] border-b border-gray-300">
   <h3 class="text-2xl font-semibold mb-8 text-center md:text-left">Produk Terpopuler</h3>
 
   <!-- Grid Container -->
@@ -176,64 +222,60 @@
   </div>
 </section>
     <!-- FOOTER -->
- <footer class="bg-white border-t border-gray-200 text-gray-700 py-12 px-6 md:px-16">
+ <footer class="bg-[#DAA520] border-t border-gray-200 text-[#4C4334] py-12 px-6 md:px-16 font-['Playfair_Display']">
   <div class="max-w-7xl mx-auto">
     <!-- Bagian atas: newsletter -->
     <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
       <div>
-        <h2 class="text-2xl font-semibold">Stay in the loop with<br>our latest listings</h2>
+        <h2 class="text-2xl font-bold">Lapar adalah masa lalu. Pesan sekarang, nikmati kebahagiaan secepat kilat<br>Cita rasa terbaik sudah menanti Anda</h2>
       </div>
       <div class="flex items-center mt-6 md:mt-0 space-x-2"> 
       </div>
-      <a href="#" class="hidden md:block text-sm text-gray-500 hover:text-gray-700">Back To Top ↑</a>
+      <a href="#" class="hidden md:block text-sm text-white hover:text-black">KEMBALI KE ATAS ↑</a>
     </div>
 
     <!-- Bagian tengah: alamat & link -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-20px">
       <div>
-        <h3 class="font-semibold mb-2"> TULUNGAGUNG</h3>
-        <p>T: (+33) 1 45 67 89 01</p>
-        <p>23 Rue Saint-Honoré,</p>
-        <p>75001 Paris, France</p>
+        <h3 class="font-bold mb-3">HUBUNGI KAMI</h3>
+        <p>+62 831 990 1000</p>
+        <p>Saloka231@gmail.com </p>
       </div>
 
       <div>
-        <h3 class="font-semibold mb-2">Bordeaux</h3>
-        <p>T: (+33) 5 56 78 90 12</p>
-        <p>15 Cours de l’Intendance,</p>
-        <p>33000 Bordeaux, France</p>
+        <h3 class="font-semibold mb-2">TULUNGAGUNG</h3>
+        <h3 class="font-semibold mb-2">MALANG</h3>
+        <h3 class="font-semibold mb-2">SURABAYA</h3>
+        <h3 class="font-semibold mb-2">KEDIRI</h3>
       </div>
 
       <div>
-        <h3 class="font-semibold mb-2">Explore</h3>
+        <h3 class="font-semibold mb-2">NAVIGASI</h3>
         <ul class="space-y-1">
-          <li><a href="#" class="hover:underline">Products</a></li>
-          <li><a href="#" class="hover:underline">Shop</a></li>
-          <li><a href="#" class="hover:underline"></a></li>
+          <li><a href="Marketpalce.html" class="hover:underline hover:text-black">Products</a></li>
+          <li><a href="#" class="hover:underline hover:text-black">Shop</a></li>
+          <li><a href="#" class="hover:underline hover:text-black"></a></li>
         </ul>
       </div>
 
       <div>
-        <h3 class="font-semibold mb-2">Social</h3>
+        <h3 class="font-semibold mb-2">FOLLOW US</h3>
         <div class="flex space-x-4">
-      
-    <a href="#" title="Instagram">
-      <img src="img/instagram-removebg-preview.png" alt="Instagram" class="w-9 h-9 hover:scale-100 transition-transform duration-200">
     </a>
     <a href="#" title="Facebook">
-      <img src="img/facebook-removebg-preview.png" alt="Facebook" class="w-8 h-8 mb-4 hover:scale-110 transition-transform duration-200">
+      <img src="img/facebook-removebg-preview.png" alt="Facebook" class="w-8 h-8 mb-8 hover:scale-110 transition-transform duration-200 filter brightness-0">
     </a>
     <a href="#" title="YouTube">
-      <img src="img/youtube-removebg-preview.png" alt="YouTube" class="w-9 h-6 mt-1.5 hover:scale-110 transition-transform duration-200">
+      <img src="img/youtube-removebg-preview.png" alt="YouTube" class="w-9 h-6 mt-1.5 hover:scale-110 transition-transform duration-200 filter brightness-0">
     </a>
   </div>
       </div>
-    </div>
+    </div> 
 
     <!-- Bagian bawah -->
-    <div class="mt-12 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 border-t border-gray-200 pt-6">
-      <p>© 2025 Your TOKO. All Rights Reserved.</p>
-      <a href="#" class="mt-2 md:mt-0 hover:underline">Privacy Policy</a>
+    <div class="mt-12 flex flex-col md:flex-row justify-between items-center text-xs text-white border-t border-gray-200 pt-6">
+      <p>© 2025 Your Marketplace. All Rights Reserved.</p>
+      <a href="#" class="mt-2 md:mt-0 hover:underline hover:text-black">Privacy Policy</a>
     </div>
   </div>
 </footer>
