@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>MARKETPLACE</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <!-- Navbar -->
+    <a href="Marketplace.html" class="btn">Lihat Semua Villa</a>
+    <header class="flex justify-between items-center px-8 py-4 bg-white shadow-sm">
+    <div class="flex items-center gap-2">
+      <img src="https://img.icons8.com/emoji/48/box-emoji.png" alt="logo" class="w-8 h-8">
+      <h1 class="text-xl font-bold">Snackes</h1>
+    </div>
+    <nav class="flex items-center gap-8 text-sm font-medium">
+      <a href="#" class="text-yellow-500">Home</a>
+      <a href="#" class="hover:text-yellow-600">Marketplace</a>
+      <a href="#" class="hover:text-yellow-600">About Us</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <input type="text" placeholder="Search" class="border border-gray-300 rounded-full px-3 py-1 text-sm focus:outline-none" />
+      <button class="text-gray-600 hover:text-yellow-600">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18M3 12h18M3 21h18" />
+        </svg>
+      </button>
+    </div>
+
+     
+
+    <!-- Search + Icons -->
+    <div class="flex items-center gap-4">
+      
+
+
+      <!-- Icons -->
+      <div class="flex items-center gap-4 text-gray-600">
+        <!-- Notification -->
+        <button class="relative hover:text-yellow-500 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 17h5l-1.405-1.405C18.21 14.79 18 13.918 18 13V9a6 6 0 00-9.33-4.972" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 17h5m0 0a3 3 0 006 0m-6 0H4" />
+          </svg>
+          <span class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] px-1 rounded-full">3</span>
+        </button>
+
+        <!-- Cart -->
+        <button class="relative hover:text-yellow-500 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.6 8h13.2L17 13M7 13h10" />
+          </svg>
+          <span class="absolute -top-1 -right-1 bg-yellow-400 text-white text-[10px] px-1 rounded-full">2</span>
+        </button>
+
+        <!-- Profile -->
+        <button class="hover:text-yellow-500 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 12c2.485 0 4.5-2.015 4.5-4.5S14.485 3 12 3 7.5 5.015 7.5 7.5 9.515 12 12 12zm0 1.5c-3.315 0-6 2.238-6 5.002V21h12v-2.498c0-2.764-2.685-5.002-6-5.002z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- HERO -->
+<section class="text-center py-20 relative">
+    <h2 class="text-4xl md:text-5xl font-bold">
+      <span class="text-yellow-600"> Koleksi Jajanan-Jajanan </span>
+      <span class="text-blue-500">Dan Oleh-Oleh </span><br>
+      <span class="text-purple-600">Pilihan Terpercaya.</span>
+    </h2>
+    <p class="text-gray-600 mt-4"> Semakin lama disini, di jamin makin bingung milih.</p>
+    <button class="mt-8 px-6 py-3 bg-gradient-to-r from-blue-400 to-purple-500 text-white rounded-full shadow-md hover:opacity-90 transition">
+      Jelajahi Seleramu sekarang!
+    </button>
+  </section>
+
+  <!-- Popular Products Section -->
+<section class="px-8 py-12 bg-white">
+  <h3 class="text-2xl font-semibold mb-8 text-center md:text-left">Produk Terpopuler</h3>
+
+  <!-- Grid Container -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
+    
+    <!-- Product Card 1 -->
+    <div class="bg-white w-64 rounded-2xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 p-4">
+      <img src="img/10.jpg" alt="White Shirt" class="rounded-lg mb-3 w-full h-40 object-cover">
+      <h4 class="font-semibold text-gray-800">Geti (Getuk Kacang)</h4>
+      <p class="text-sm text-gray-500 mt-1">Camilan manis dan gurih dari kacang tanah sangrai, gula merah, dan wijen. Teksturnya padat dan legit, cocok untuk teman minum teh atau kopi..</p>
+      <div class="flex justify-between items-center mt-3">
+        <span class="font-semibold text-gray-700">Rp. 10.000</span>
+        <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-sm transition">Buy</button>
+      </div>
+    </div>
+
+    <!-- Product Card 2 -->
+    <div class="bg-white w-64 rounded-2xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 p-4">
+      <img src="https://via.placeholder.com/250x180" alt="Rosquillas Caseras" class="rounded-lg mb-3 w-full h-40 object-cover">
+      <h4 class="font-semibold text-gray-800">Jenang Suran</h4>
+      <p class="text-sm text-gray-500 mt-1">Jenang kenyal dengan cita rasa manis legit khas Tulungagung. Dibuat secara tradisional, menjadikannya oleh-oleh otentik dari daerah Suran..</p>
+      <div class="flex justify-between items-center mt-3">
+        <span class="font-semibold text-gray-700">10.000</span>
+        <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-sm transition">Buy</button>
+      </div>
+    </div>
+
+    <!-- Product Card 3 -->
+    <div class="bg-white w-64 rounded-2xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 p-4">
+      <img src="img/3.jpg" alt="Fresh Cheese" class="rounded-lg mb-3 w-full h-40 object-cover">
+      <h4 class="font-semibold text-gray-800">Keripik Tempe</h4>
+      <p class="text-sm text-gray-500 mt-1">Tempe diiris tipis, dilapisi adonan tepung berbumbu, lalu digoreng hingga renyah. Jadi ikon oleh-oleh Tulungagung yang paling dicari wisatawan..</p>
+      <div class="flex justify-between items-center mt-3">
+        <span class="font-semibold text-gray-700">Rp. 12.000</span>
+        <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-sm transition">Buy</button>
+      </div>
+    </div>
+
+    <!-- Product Card 4 -->
+    <div class="bg-white w-64 rounded-2xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 p-4">
+      <img src="img/4.jpg" alt="Traditional Shoes" class="rounded-lg mb-3 w-full h-40 object-cover">
+      <h4 class="font-semibold text-gray-800">Lanting</h4>
+      <p class="text-sm text-gray-500 mt-1">Camilan renyah berbentuk lingkaran kecil dari singkong. Rasanya gurih dengan variasi pedas, manis, dan keju yang disukai semua usia.</p>
+      <div class="flex justify-between items-center mt-3">
+        <span class="font-semibold text-gray-700">Rp. 12.000</span>
+        <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-sm transition">Buy</button>
+      </div>
+    </div>
+
+    <!-- Product Card 5 -->
+    <div class="bg-white w-64 rounded-2xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 p-4">
+      <img src="img/5.jpg" alt="Blackmond Cookies" class="rounded-lg mb-3 w-full h-40 object-cover">
+      <h4 class="font-semibold text-gray-800">Kerupuk Kulit (Rambak)</h4>
+      <p class="text-sm text-gray-500 mt-1">Gurih, renyah, dan nikmat dimakan langsung atau jadi lauk pendamping nasi pecel. Dibuat dari kulit sapi pilihan dan digoreng hingga mengembang sempurna.</p>
+      <div class="flex justify-between items-center mt-3">
+        <span class="font-semibold text-gray-700">Rp. 30.000</span>
+        <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-sm transition">Buy</button>
+      </div>
+    </div>
+
+    <!-- Product Card 6 -->
+    <div class="bg-white w-64 rounded-2xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 p-4">
+      <img src="img/6.jpg" alt="Bubur Kacang Hijau" class="rounded-lg mb-3 w-full h-40 object-cover">
+      <h4 class="font-semibold text-gray-800">Sambel Pecel</h4>
+      <p class="text-sm text-gray-500 mt-1">Sambal kacang kental dengan aroma daun jeruk yang khas dan rasa pedas-manis seimbang. Cukup diseduh air panas, langsung siap santap dengan sayur rebus.</p>
+      <div class="flex justify-between items-center mt-3">
+        <span class="font-semibold text-gray-700">Rp. 12.000</span>
+        <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-sm transition">Buy</button>
+      </div>
+    </div>
+
+    <!-- Product Card 7 -->
+    <div class="bg-white w-64 rounded-2xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 p-4">
+      <img src="img/7.jpg" alt="Bubur Kacang Hijau" class="rounded-lg mb-3 w-full h-40 object-cover">
+      <h4 class="font-semibold text-gray-800">Kue Carang Mas</h4>
+      <p class="text-sm text-gray-500 mt-1">Kue ringan dari parutan ubi jalar goreng yang disiram gula merah leleh. Renyah, manis, dan sering jadi favorit anak-anak.</p>
+      <div class="flex justify-between items-center mt-3">
+        <span class="font-semibold text-gray-700">Rp. 12.000</span>
+        <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-sm transition">Buy</button>
+      </div>
+    </div>
+
+    <!-- Product Card 8 -->
+    <div class="bg-white w-64 rounded-2xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 p-4">
+      <img src="img/8.jpg" alt="Bubur Kacang Hijau" class="rounded-lg mb-3 w-full h-40 object-cover">
+      <h4 class="font-semibold text-gray-800">Keripik Ubi Ungu / Singkong Tulungagung</h4>
+      <p class="text-sm text-gray-500 mt-1">Terbuat dari bahan lokal pilihan dengan rasa manis alami dan tekstur garing. Warnanya menarik dan cocok dijadikan camilan sehat atau oleh-oleh ringan.</p>
+      <div class="flex justify-between items-center mt-3">
+        <span class="font-semibold text-gray-700">Rp. 20.000</span>
+        <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-sm transition">Buy</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+    <!-- FOOTER -->
+ <footer class="bg-white border-t border-gray-200 text-gray-700 py-12 px-6 md:px-16">
+  <div class="max-w-7xl mx-auto">
+    <!-- Bagian atas: newsletter -->
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
+      <div>
+        <h2 class="text-2xl font-semibold">Stay in the loop with<br>our latest listings</h2>
+      </div>
+      <div class="flex items-center mt-6 md:mt-0 space-x-2"> 
+      </div>
+      <a href="#" class="hidden md:block text-sm text-gray-500 hover:text-gray-700">Back To Top ↑</a>
+    </div>
+
+    <!-- Bagian tengah: alamat & link -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm">
+      <div>
+        <h3 class="font-semibold mb-2"> TULUNGAGUNG</h3>
+        <p>T: (+33) 1 45 67 89 01</p>
+        <p>23 Rue Saint-Honoré,</p>
+        <p>75001 Paris, France</p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-2">Bordeaux</h3>
+        <p>T: (+33) 5 56 78 90 12</p>
+        <p>15 Cours de l’Intendance,</p>
+        <p>33000 Bordeaux, France</p>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-2">Explore</h3>
+        <ul class="space-y-1">
+          <li><a href="#" class="hover:underline">Products</a></li>
+          <li><a href="#" class="hover:underline">Shop</a></li>
+          <li><a href="#" class="hover:underline"></a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-semibold mb-2">Social</h3>
+        <div class="flex space-x-4">
+      
+    <a href="#" title="Instagram">
+      <img src="img/instagram-removebg-preview.png" alt="Instagram" class="w-9 h-9 hover:scale-100 transition-transform duration-200">
+    </a>
+    <a href="#" title="Facebook">
+      <img src="img/facebook-removebg-preview.png" alt="Facebook" class="w-8 h-8 mb-4 hover:scale-110 transition-transform duration-200">
+    </a>
+    <a href="#" title="YouTube">
+      <img src="img/youtube-removebg-preview.png" alt="YouTube" class="w-9 h-6 mt-1.5 hover:scale-110 transition-transform duration-200">
+    </a>
+  </div>
+      </div>
+    </div>
+
+    <!-- Bagian bawah -->
+    <div class="mt-12 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 border-t border-gray-200 pt-6">
+      <p>© 2025 Your TOKO. All Rights Reserved.</p>
+      <a href="#" class="mt-2 md:mt-0 hover:underline">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

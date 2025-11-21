@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Daftar Villa</title>
+
+<style>
+    body { font-family: Arial; margin: 0; background: #f0f0f0; }
+    .navbar { background: white; padding: 15px 30px; display: flex; justify-content: space-between; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .navbar a { margin-left: 20px; text-decoration: none; color: #333; font-weight: bold; }
+    .navbar a:hover { color: #6a5cff; }
+
+    .header { padding: 30px; }
+    .header h2 { margin: 0; }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-body h3 { margin: 8px 0; font-size: 16px; }
+    .card-body p { margin: 6px 0; font-size: 13px; color: #666; }
+    .price { font-weight: bold; color: #222; }
+    .rating { background: #ffd676; padding: 3px 8px; border-radius: 5px; font-size: 12px; }
+</style>
+
+</head>
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+    <div class="logo">Dubai Villas</div>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="villas.html">Villas</a>
+        <a href="about.html">About</a>
+    </div>
+</div>
+
+<div class="header">
+    <h2>Dubai City – Jumeirah Villa</h2>
+    <p>649 Villas tersedia</p>
+</div>
+
+<div class="grid">
+
+    <div class="card">
+        <img src="assets/img/villa1.jpg" alt="">
+        <div class="card-body">
+            <h3>Five Palm Jumeirah Beachfront Villa</h3>
+            <p>8 guests • 4 bedrooms</p>
+            <p class="price">From 1.920 USD</p>
+            <span class="rating">⭐ 4.6</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="assets/img/villa2.jpg" alt="">
+        <div class="card-body">
+            <h3>Arabian Summerhouse Family Suite</h3>
+            <p>6 guests • 3 bedrooms</p>
+            <p class="price">From 890 USD</p>
+            <span class="rating">⭐ 3.2</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="assets/img/villa3.jpg" alt="">
+        <div class="card-body">
+            <h3>Beach Front Villa at Five Palm</h3>
+            <p>6 guests • 2 bedrooms</p>
+            <p class="price">From 750 USD</p>
+            <span class="rating">⭐ 5.0</span>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
