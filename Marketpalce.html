@@ -107,7 +107,125 @@
       </div>
     </div>
   </header>
+<!-- HERO -->
+ <section>
+  <div style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+    
+    <h2 style="font-family: Arial, sans-serif; font-size: 2em; color: #333; margin-bottom: 5px;">
+        Arsip: Saloka Rasa Lokal
+    </h2>
+    <p style="font-size: 0.9em; color: #666; margin-bottom: 20px;">
+        Menampilkan 6 produk dari 6 total hasil.
+    </p>
 
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+
+        <aside style="width: 250px; padding: 20px; background-color: #ffffff; border: 1px solid #e7e7e7; border-radius: 4px; margin-right: 30px;">
+            
+            <h3 style="font-size: 1.2em; color: #333; border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-top: 0;">
+                Filter Produk
+            </h3>
+            
+            <div style="margin-bottom: 20px;">
+                <h4 style="font-size: 1em; color: #555; margin-bottom: 10px;">Filter berdasarkan Harga</h4>
+                <input type="number" value="10000" style="width: 60px; padding: 5px; border: 1px solid #ccc;">
+                <span style="margin: 0 5px;">-</span>
+                <input type="number" value="50000" style="width: 60px; padding: 5px; border: 1px solid #ccc;">
+                <button style="padding: 5px 10px; background-color: #f7a040; color: white; border: none; cursor: pointer;">Filter</button>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h4 style="font-size: 1em; color: #555; margin-bottom: 10px;">Filter berdasarkan Rasa</h4>
+                <div style="margin-bottom: 5px;"><input type="checkbox"> Manis (4)</div>
+                <div style="margin-bottom: 5px;"><input type="checkbox"> Gurih (3)</div>
+                <div style="margin-bottom: 5px;"><input type="checkbox"> Pedas (2)</div>
+                <div style="margin-bottom: 5px;"><input type="checkbox"> Tradisional (6)</div>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <h4 style="font-size: 1em; color: #555; margin-bottom: 10px;">Filter berdasarkan Rating</h4>
+                <div style="margin-bottom: 5px;"><input type="checkbox"> ⭐⭐⭐⭐⭐ (6)</div>
+                <div style="margin-bottom: 5px;"><input type="checkbox"> ⭐⭐⭐⭐ (0)</div>
+                <div style="margin-bottom: 5px;"><input type="checkbox"> ⭐⭐⭐ (0)</div>
+            </div>
+
+        </aside>
+
+        <div style="flex-grow: 1;">
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; border: 1px solid #ddd; padding: 10px; margin-bottom: 20px; background-color: #f9f9f9;">
+                <div style="font-size: 0.9em; color: #666;">
+                    Menampilkan 1-6 dari 6 produk
+                </div>
+                <div style="font-size: 0.9em;">
+                    Urutkan: 
+                    <select style="padding: 5px;">
+                        <option>Default sorting</option>
+                        <option>Harga terendah</option>
+                        <option>Terpopuler</option>
+                    </select>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+                
+                <div class="product-card" style="border: 1px solid #eee; padding: 10px; text-align: center; background-color: white;">
+                    <img src="img/Kripik tempe.jpg" alt="Kripik tempe" style="width: 100%; height: 180px; object-fit: cover; margin-bottom: 10px; border-radius: 3px;">
+                    <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Keripik tempe</h4>
+                    <div style="color: gold; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
+                    <p style="font-size: 1.2em; font-weight: bold; color: #d64d00;">Rp. 5.000</p>
+                    <button style="padding: 8px 15px; background-color: #f7a040; color: white; border: none; cursor: pointer; border-radius: 3px;">Tambah ke Keranjang</button>
+                </div>
+                
+                <div class="product-card" style="border: 1px solid #eee; padding: 10px; text-align: center; background-color: white;">
+                    <img src="img/Kue Pukis.jpg" alt="Kue Pukis" style="width: 100%; height: 180px; object-fit: cover; margin-bottom: 10px; border-radius: 3px;">
+                    <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Kue Pukis</h4>
+                    <div style="color: gold; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
+                    <p style="font-size: 1.2em; font-weight: bold; color: #d64d00;">Rp. 5.000</p>
+                    <button style="padding: 8px 15px; background-color: #f7a040; color: white; border: none; cursor: pointer; border-radius: 3px;">Tambah ke Keranjang</button>
+                </div>
+
+                <div class="product-card" style="border: 1px solid #eee; padding: 10px; text-align: center; background-color: white;">
+                    <img src="img/Jenang suran.jpg" alt="Jenang suran" style="width: 100%; height: 180px; object-fit: cover; margin-bottom: 10px; border-radius: 3px;">
+                    <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Jenang suran</h4>
+                    <div style="color: gold; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
+                    <p style="font-size: 1.2em; font-weight: bold; color: #d64d00;">Rp. 12.000</p>
+                    <button style="padding: 8px 15px; background-color: #f7a040; color: white; border: none; cursor: pointer; border-radius: 3px;">Tambah ke Keranjang</button>
+                </div>
+                
+                <div class="product-card" style="border: 1px solid #eee; padding: 10px; text-align: center; background-color: white;">
+                    <img src="img/Cireng.jpg" alt="Cireng" style="width: 100%; height: 180px; object-fit: cover; margin-bottom: 10px; border-radius: 3px;">
+                    <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Cireng</h4>
+                    <div style="color: gold; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
+                    <p style="font-size: 1.2em; font-weight: bold; color: #d64d00;">Rp. 6.000</p>
+                    <button style="padding: 8px 15px; background-color: #f7a040; color: white; border: none; cursor: pointer; border-radius: 3px;">Tambah ke Keranjang</button>
+                </div>
+                
+                </div>
+                  <div class="product-card" style="border: 1px solid #eee; padding: 10px; text-align: center; background-color: white;">
+                    <img src="img/Martabak Manis.jpg" alt="Martabak Manis" style="width: 100%; height: 180px; object-fit: cover; margin-bottom: 10px; border-radius: 3px;">
+                    <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Martabak Manis</h4>
+                    <div style="color: gold; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
+                    <p style="font-size: 1.2em; font-weight: bold; color: #d64d00;">Rp. 10.000</p>
+                    <button style="padding: 8px 15px; background-color: #f7a040; color: white; border: none; cursor: pointer; border-radius: 3px;">Tambah ke Keranjang</button>
+                </div>
+                  <div class="product-card" style="border: 1px solid #eee; padding: 10px; text-align: center; background-color: white;">
+                    <img src="img/O, dat ding.jpg" alt="Odading" style="width: 100%; height: 180px; object-fit: cover; margin-bottom: 10px; border-radius: 3px;">
+                    <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Odading</h4>
+                    <div style="color: gold; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
+                    <p style="font-size: 1.2em; font-weight: bold; color: #d64d00;">Rp. 3.000</p>
+                    <button style="padding: 8px 15px; background-color: #f7a040; color: white; border: none; cursor: pointer; border-radius: 3px;">Tambah ke Keranjang</button>
+                </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <button style="padding: 10px 30px; background-color: #fff; color: #f7a040; border: 1px solid #f7a040; cursor: pointer; border-radius: 4px; font-weight: bold;">Muat Lebih Banyak Produk</button>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+ </section>
 
   <!-- FOOTER -->
  <footer class="bg-[#DAA520] border-t border-gray-200 text-[#4C4334] py-12 px-6 md:px-16 font-['Playfair_Display']">

@@ -46,8 +46,10 @@
       });
     </script>
 </head>
+
 <body class="bg-[#fff2d6]">
     <!-- HEADER -->
+     
     <!-- Navbar -->
     <nav class="flex items-center gap-8 text-sm font-medium">
   
@@ -112,7 +114,7 @@
   </header>
 
     <!-- HERO -->
-<section class="text-center py-20 relative">
+     <section class="text-center py-20 relative">
     <h2 class="text-4xl md:text-5xl font-bold">
       <span class="text-yellow-600"> Koleksi Jajanan-Jajanan </span>
       <span class="text-blue-500">Dan Oleh-Oleh </span><br>
@@ -123,104 +125,445 @@
       Jelajahi Seleramu sekarang!
     </a>
   </section>
+<section class="text-center py-20 relative">
+   <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desain Menu Populer (Replika)</title>
+    <style>
+        /* CSS Global */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background-color: #f0f3f6; /* Latar belakang soft */
+        }
 
-  <!-- Popular Products Section -->
-<section class="px-8 py-12 bg-[#fff2d6] border-b border-gray-300">
-  <h3 class="text-2xl font-semibold mb-8 text-center md:text-left">Produk Terpopuler</h3>
+        /* Bagian Menu Utama */
+        .menu-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-  <!-- Grid Container -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 justify-items-center">
-    
-    <!-- Product Card 1 -->
-    <div class="bg-white w-64 rounded-2xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 p-4">
-      <img src="img/10.jpg" alt="White Shirt" class="rounded-lg mb-3 w-full h-40 object-cover">
-      <h4 class="font-semibold text-gray-800">Geti (Getuk Kacang)</h4>
-      <p class="text-sm text-gray-500 mt-1">Camilan manis dan gurih dari kacang tanah sangrai, gula merah, dan wijen. Teksturnya padat dan legit, cocok untuk teman minum teh atau kopi..</p>
-      <div class="flex justify-between items-center mt-3">
-        <span class="font-semibold text-gray-700">Rp. 10.000</span>
-        <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-sm transition">Buy</button>
-      </div>
+        /* Judul */
+        .menu-section h2 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Kontrol/Icon Navigasi di Atas */
+        .control-nav {
+            display: flex;
+            justify-content: flex-end; /* Posisikan ke kanan */
+            margin-bottom: 30px;
+        }
+
+        .control-nav .icon {
+            /* Placeholder untuk Icon Filter/Search */
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #a0a0a0;
+            margin-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* GRID Layout untuk Kartu Menu */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* 3 kolom sama besar */
+            gap: 30px; /* Jarak antar kartu */
+        }
+
+        /* Gaya Kartu Menu */
+        .menu-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Bayangan lembut */
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Icon Like & Rating (Pojok Kanan Atas) */
+        .rating-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 5px 10px;
+            font-size: 12px;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+        .rating-box .star {
+            color: gold; /* Warna bintang */
+            margin-right: 5px;
+        }
+
+        /* Placeholder Gambar Makanan */
+        .menu-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #e0e0e0; /* Placeholder abu-abu */
+            margin-bottom: 15px;
+            overflow: hidden;
+            border: 2px solid white; /* Cincin putih di sekitar gambar */
+            box-shadow: 0 0 0 5px #f0f3f6; /* Efek cincin luar */
+        }
+        .menu-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Detail Teks */
+        .menu-card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin: 0 0 5px 0;
+            text-align: left;
+            width: 100%;
+        }
+
+        .menu-card p {
+            font-size: 13px;
+            color: #777;
+            margin-bottom: 15px;
+            text-align: left;
+            width: 100%;
+        }
+
+        /* Harga dan Tombol Beli */
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #5cb85c; /* Warna hijau untuk harga */
+        }
+
+        .cart-btn {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .cart-btn:hover {
+            background-color: #4cae4c;
+        }
+        
+        /* Navigasi Bawah (Panah) */
+        .bottom-nav {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 40px;
+        }
+
+        .bottom-nav .arrow {
+            width: 40px;
+            height: 40px;
+            background-color: #5cb85c; /* Warna hijau */
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Responsif untuk Layar Kecil */
+        @media (max-width: 900px) {
+            .menu-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .menu-grid {
+                grid-template-columns: 1fr; /* 1 kolom di ponsel */
+            }
+            .control-nav {
+                justify-content: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="menu-section">
+        <h2>Menu Populer Kami</h2>
+
+        <div class="control-nav">
+            <div class="icon">🛒</div>
+            <div class="icon">✏️</div>
+            <div class="icon">🔍</div>
+        </div>
+
+        <div class="menu-grid">
+            
+            <div class="menu-card">
+                <div class="rating-box">
+                    <span class="star">★</span> 5.0
+                </div>
+                <div class="menu-image">
+                  <img src="img/Kripik tempe.jpg" alt="Kripik tempe">
+                    </div>
+                <h3>Keripik tempe</h3>
+                <p>Kriuk kriuk maknyus.</p>
+                
+                <div class="card-footer">
+                    <span class="price">Rp. 5.000</span>
+                    <button class="cart-btn">🛒</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="rating-box">
+                    <span class="star">★</span> 5.0
+                </div>
+                <div class="menu-image">
+               <img src="img/Kue Pukis.jpg" alt="Kue Pukis">
+                </div>
+                <h3>Pukis</h3>
+                <p>Lembut di setiap gigitan.</p>
+                <div class="card-footer">
+                    <span class="price">Rp. 5.000</span>
+                    <button class="cart-btn">🛒</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                    <div class="rating-box">
+                    <span class="star">★</span> 5.0
+                </div>
+                <div class="menu-image">
+               <img src="img/Jenang suran.jpg" alt="Kue Pukis">
+                </div>
+                <h3>Jenang suran</h3>
+                <p>Jenang dengan rasa gurih dan manis bercampur rempah-rempah.</p>
+                <div class="card-footer">
+                    <span class="price">Rp. 12.000</span>
+                    <button class="cart-btn">🛒</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="rating-box">
+                    <span class="star">★</span> 5.0
+                </div>
+                <div class="menu-image">
+                <img src="img/Cireng.jpg" alt="Cireng">
+                </div>
+                <h3>Cireng</h3>
+                <p> Cemilan gurih yang terbuat dari tepung tapioka.</p>
+                <div class="card-footer">
+                    <span class="price">Rp. 6.000</span>
+                    <button class="cart-btn">🛒</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="rating-box">
+                    <span class="star">★</span> 5.0
+                </div>
+                <div class="menu-image">
+                <img src="img/Martabak Manis.jpg" alt="Martabak Manis">
+                </div>
+                <h3>Martabak manis</h3>
+                <p>Mertua sinis? bawain aja Martabak manis.</p>
+                <div class="card-footer">
+                    <span class="price">Rp. 10.000</span>
+                    <button class="cart-btn">🛒</button>
+                </div>
+            </div>
+
+            <div class="menu-card">
+                <div class="rating-box">
+                    <span class="star">★</span> 5.0
+                </div>
+                <div class="menu-image">
+                <img src="img/O, dat ding.jpg" alt="Odading">
+                </div>
+                <h3>Odading</h3>
+                <p>O, dat ding rasanya seperti Anda menjadi Iron Man.</p>
+                <div class="card-footer">
+                    <span class="price">Rp. 3.000</span>
+                    <button class="cart-btn">🛒</button>
+                </div>
+            </div>
+
     </div>
 
-    <!-- Product Card 2 -->
-    <div class="bg-white w-64 rounded-2xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 p-4">
-      <img src="https://via.placeholder.com/250x180" alt="Rosquillas Caseras" class="rounded-lg mb-3 w-full h-40 object-cover">
-      <h4 class="font-semibold text-gray-800">Jenang Suran</h4>
-      <p class="text-sm text-gray-500 mt-1">Jenang kenyal dengan cita rasa manis legit khas Tulungagung. Dibuat secara tradisional, menjadikannya oleh-oleh otentik dari daerah Suran..</p>
-      <div class="flex justify-between items-center mt-3">
-        <span class="font-semibold text-gray-700">10.000</span>
-        <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-sm transition">Buy</button>
-      </div>
-    </div>
+</body>
+</html>
 
-    <!-- Product Card 3 -->
-    <div class="bg-white w-64 rounded-2xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 p-4">
-      <img src="img/3.jpg" alt="Fresh Cheese" class="rounded-lg mb-3 w-full h-40 object-cover">
-      <h4 class="font-semibold text-gray-800">Keripik Tempe</h4>
-      <p class="text-sm text-gray-500 mt-1">Tempe diiris tipis, dilapisi adonan tepung berbumbu, lalu digoreng hingga renyah. Jadi ikon oleh-oleh Tulungagung yang paling dicari wisatawan..</p>
-      <div class="flex justify-between items-center mt-3">
-        <span class="font-semibold text-gray-700">Rp. 12.000</span>
-        <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-sm transition">Buy</button>
-      </div>
-    </div>
 
-    <!-- Product Card 4 -->
-    <div class="bg-white w-64 rounded-2xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 p-4">
-      <img src="img/4.jpg" alt="Traditional Shoes" class="rounded-lg mb-3 w-full h-40 object-cover">
-      <h4 class="font-semibold text-gray-800">Lanting</h4>
-      <p class="text-sm text-gray-500 mt-1">Camilan renyah berbentuk lingkaran kecil dari singkong. Rasanya gurih dengan variasi pedas, manis, dan keju yang disukai semua usia.</p>
-      <div class="flex justify-between items-center mt-3">
-        <span class="font-semibold text-gray-700">Rp. 12.000</span>
-        <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-sm transition">Buy</button>
-      </div>
-    </div>
 
-    <!-- Product Card 5 -->
-    <div class="bg-white w-64 rounded-2xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 p-4">
-      <img src="img/5.jpg" alt="Blackmond Cookies" class="rounded-lg mb-3 w-full h-40 object-cover">
-      <h4 class="font-semibold text-gray-800">Kerupuk Kulit (Rambak)</h4>
-      <p class="text-sm text-gray-500 mt-1">Gurih, renyah, dan nikmat dimakan langsung atau jadi lauk pendamping nasi pecel. Dibuat dari kulit sapi pilihan dan digoreng hingga mengembang sempurna.</p>
-      <div class="flex justify-between items-center mt-3">
-        <span class="font-semibold text-gray-700">Rp. 30.000</span>
-        <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-sm transition">Buy</button>
-      </div>
-    </div>
-
-    <!-- Product Card 6 -->
-    <div class="bg-white w-64 rounded-2xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 p-4">
-      <img src="img/6.jpg" alt="Bubur Kacang Hijau" class="rounded-lg mb-3 w-full h-40 object-cover">
-      <h4 class="font-semibold text-gray-800">Sambel Pecel</h4>
-      <p class="text-sm text-gray-500 mt-1">Sambal kacang kental dengan aroma daun jeruk yang khas dan rasa pedas-manis seimbang. Cukup diseduh air panas, langsung siap santap dengan sayur rebus.</p>
-      <div class="flex justify-between items-center mt-3">
-        <span class="font-semibold text-gray-700">Rp. 12.000</span>
-        <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-sm transition">Buy</button>
-      </div>
-    </div>
-
-    <!-- Product Card 7 -->
-    <div class="bg-white w-64 rounded-2xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 p-4">
-      <img src="img/7.jpg" alt="Bubur Kacang Hijau" class="rounded-lg mb-3 w-full h-40 object-cover">
-      <h4 class="font-semibold text-gray-800">Kue Carang Mas</h4>
-      <p class="text-sm text-gray-500 mt-1">Kue ringan dari parutan ubi jalar goreng yang disiram gula merah leleh. Renyah, manis, dan sering jadi favorit anak-anak.</p>
-      <div class="flex justify-between items-center mt-3">
-        <span class="font-semibold text-gray-700">Rp. 12.000</span>
-        <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-sm transition">Buy</button>
-      </div>
-    </div>
-
-    <!-- Product Card 8 -->
-    <div class="bg-white w-64 rounded-2xl shadow hover:shadow-lg transition-transform transform hover:-translate-y-1 p-4">
-      <img src="img/8.jpg" alt="Bubur Kacang Hijau" class="rounded-lg mb-3 w-full h-40 object-cover">
-      <h4 class="font-semibold text-gray-800">Keripik Ubi Ungu / Singkong Tulungagung</h4>
-      <p class="text-sm text-gray-500 mt-1">Terbuat dari bahan lokal pilihan dengan rasa manis alami dan tekstur garing. Warnanya menarik dan cocok dijadikan camilan sehat atau oleh-oleh ringan.</p>
-      <div class="flex justify-between items-center mt-3">
-        <span class="font-semibold text-gray-700">Rp. 20.000</span>
-        <button class="bg-yellow-400 hover:bg-yellow-500 text-white px-3 py-1 rounded-full text-sm transition">Buy</button>
-      </div>
-    </div>
-
-  </div>
+  
 </section>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keuntungan Saloka (Tampilan Mirip)</title>
+    <style>
+        /* Gaya CSS Dasar */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Judul */
+        h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Container untuk 4 kotak */
+        .benefits-container {
+            display: flex;
+            gap: 20px; /* Jarak antar kotak */
+            max-width: 1200px;
+            width: 100%;
+            justify-content: center;
+            flex-wrap: wrap; /* Agar responsif di layar kecil */
+        }
+
+        /* Gaya setiap kotak */
+        .benefit-card {
+            background-color: white; /* Warna akan diganti per card */
+            border-radius: 16px;
+            padding: 20px;
+            width: 250px; /* Lebar tetap untuk desktop */
+            min-height: 250px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end; /* Memindahkan teks ke bawah */
+            color: white;
+            position: relative;
+            overflow: hidden; /* Untuk menampung ilustrasi */
+            transition: transform 0.2s;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Warna Latar Belakang Spesifik (Sesuai Gambar) */
+        .card-1 { background-color: #8A2BE2; } /* Ungu */
+        .card-2 { background-color: #00BFFF; } /* Biru/Cyan */
+        .card-3 { background-color: #FF69B4; } /* Pink/Magenta */
+        .card-4 { background-color: #FF8C00; } /* Oranye */
+
+        /* Gaya Ilustrasi (di sini hanya diwakilkan oleh div placeholder) */
+        .illustration-placeholder {
+            /* Di dunia nyata, ini adalah tag <img> atau SVG */
+            height: 120px;
+            margin-bottom: 15px;
+            /* Placeholder Visual */
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+        }
+
+        /* Teks Deskripsi */
+        .benefit-text {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        /* Media Queries untuk Responsif */
+        @media (max-width: 1100px) {
+            .benefits-container {
+                gap: 15px;
+            }
+            .benefit-card {
+                width: calc(50% - 10px); /* 2 kolom di tablet */
+            }
+        }
+
+        @media (max-width: 600px) {
+            .benefit-card {
+                width: 100%; /* 1 kolom di ponsel */
+                min-height: 180px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Kenapa beli pakai Saloka</h2>
+
+    <div class="benefits-container">
+        <div class="benefit-card card-1">
+            <div class="illustration-placeholder"></div>
+            <p class="benefit-text">
+                20,000+ ulasan baru setiap menitnya
+            </p>
+        </div>
+
+        <div class="benefit-card card-2">
+            <div class="illustration-placeholder"></div>
+            <p class="benefit-text">
+                Delivery atau ambil sendiri di tempat
+            </p>
+        </div>
+
+        <div class="benefit-card card-4">
+            <div class="illustration-placeholder"></div>
+            <p class="benefit-text">
+                Diantar dengan aman & cepat
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
     <!-- FOOTER -->
  <footer class="bg-[#DAA520] border-t border-gray-200 text-[#4C4334] py-12 px-6 md:px-16 font-['Playfair_Display']">
   <div class="max-w-7xl mx-auto">
