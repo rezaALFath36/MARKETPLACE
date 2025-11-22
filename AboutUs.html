@@ -3,129 +3,242 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <title>MARKETPLACE</title>
-      <!-- HEADER -->
-     
-    <!-- Navbar -->
-    <nav class="flex items-center gap-8 text-sm font-medium">
-  
-    </nav>
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>PRODUCTS</title>
+  <head>
+    <!-- HEADER -->
+    <!-- NAVBAR -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-white/70 backdrop-blur-md border-b border-gray-200">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
-    <header class="flex justify-between items-center px-8 py-4 bg-[#fff2d6] shadow-sm">
+    <!-- Logo -->
     <div class="flex items-center gap-2">
-      <a href="index.html">
-        <img src="img/LOGOOOO SALOKA.png" alt="logo" class="w-40 h-16">
-      </a>
+  <img src="img/SALOKA LOGO.png" class="w-18 h-16" alt="Logo">
+  <h1 class="text-4xl font-bold">Saloka.</h1>
+</div>
 
-    </div>
-    <nav class="relative flex items-center gap-8 text-lg font-medium">
-      <a id="home-link" href="#" class="text-black hover:text-gray-700 px-3 py-1 z-10 relative">Home</a>
-      <a id="products-link" href="Marketpalce.html" class="text-black hover:text-gray-700 px-3 py-1 z-10 relative">Products</a>
-      <a id="about-link" href="#" class="text-black hover:text-gray-700 px-3 py-1 z-10 relative">About Us</a>
-      <div id="nav-indicator" class="absolute bg-[#DAA520] rounded-full transition-all duration-300 ease-in-out"></div>
-    </nav>
-    <div class="flex items-center gap-4">
-      <input type="text" placeholder="Search" class="border border-gray-300 rounded-full px-3 py-1 text-sm focus:outline-none bg-white" />
-      <button class="text-gray-600 hover:text-yellow-600">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18M3 12h18M3 21h18" />
-        </svg>
+    <!-- Navigation Links -->
+    <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
+      <li><a href="index.html" class="hover:text-black">Home</a></li>
+      <li><a href="Marketpalce.html" class="hover:text-black">Produk</a></li>
+      <li><a href="AboutUs.html" class="hover:text-black">Tentang  Kami</a></li>
+    </ul>
+
+    <!-- Buttons -->
+    <div class="hidden md:flex space-x-3">
+      <button class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100">Sign In</button>
+      <button class="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-900">
+        Contact
       </button>
     </div>
 
-     
-
-    <!-- Search + Icons -->
-    <div class="flex items-center gap-4">
-      
-
-
-      <!-- Icons -->
-      <div class="flex items-center gap-4 text-gray-600">
-        <!-- Notification -->
-        <button class="relative hover:text-yellow-500 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 17h5l-1.405-1.405C18.21 14.79 18 13.918 18 13V9a6 6 0 00-9.33-4.972" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 17h5m0 0a3 3 0 006 0m-6 0H4" />
-          </svg>
-          <span class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] px-1 rounded-full">3</span>
-        </button>
-
-        <!-- Cart -->
-        <button class="relative hover:text-yellow-500 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.6 8h13.2L17 13M7 13h10" />
-          </svg>
-          <span class="absolute -top-1 -right-1 bg-yellow-400 text-white text-[10px] px-1 rounded-full">2</span>
-        </button>
-
-        <!-- Profile -->
-        <button class="hover:text-yellow-500 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 12c2.485 0 4.5-2.015 4.5-4.5S14.485 3 12 3 7.5 5.015 7.5 7.5 9.515 12 12 12zm0 1.5c-3.315 0-6 2.238-6 5.002V21h12v-2.498c0-2.764-2.685-5.002-6-5.002z" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </header>
-
-    <!-- FOOTER -->
- <footer class="bg-[#DAA520] border-t border-gray-200 text-[#4C4334] py-12 px-6 md:px-16 font-['Playfair_Display']">
-  <div class="max-w-7xl mx-auto">
-    <!-- Bagian atas: newsletter -->
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
-      <div>
-        <h2 class="text-2xl font-bold">Lapar adalah masa lalu. Pesan sekarang, nikmati kebahagiaan secepat kilat<br>Cita rasa terbaik sudah menanti Anda</h2>
-      </div>
-      <div class="flex items-center mt-6 md:mt-0 space-x-2"> 
-      </div>
-      <a href="#" class="hidden md:block text-sm text-white hover:text-black">KEMBALI KE ATAS ↑</a>
-    </div>
-
-    <!-- Bagian tengah: alamat & link -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-20px">
-      <div>
-        <h3 class="font-bold mb-3">HUBUNGI KAMI</h3>
-        <p>+62 831 990 1000</p>
-        <p>Saloka231@gmail.com </p>
-      </div>
-
-      <div>
-        <h3 class="font-semibold mb-2">TULUNGAGUNG</h3>
-        <h3 class="font-semibold mb-2">MALANG</h3>
-        <h3 class="font-semibold mb-2">SURABAYA</h3>
-        <h3 class="font-semibold mb-2">KEDIRI</h3>
-      </div>
-
-      <div>
-        <h3 class="font-semibold mb-2">NAVIGASI</h3>
-        <ul class="space-y-1">
-          <li><a href="Marketpalce.html" class="hover:underline hover:text-black">Products</a></li>
-          <li><a href="#" class="hover:underline hover:text-black">Shop</a></li>
-          <li><a href="#" class="hover:underline hover:text-black"></a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="font-semibold mb-2">FOLLOW US</h3>
-        <div class="flex space-x-4">
-    </a>
-    <a href="#" title="Facebook">
-      <img src="img/facebook-removebg-preview.png" alt="Facebook" class="w-8 h-8 mb-8 hover:scale-110 transition-transform duration-200 filter brightness-0">
-    </a>
-    <a href="#" title="YouTube">
-      <img src="img/youtube-removebg-preview.png" alt="YouTube" class="w-9 h-6 mt-1.5 hover:scale-110 transition-transform duration-200 filter brightness-0">
-    </a>
+    <!-- Mobile Menu Toggle -->
+    <button class="md:hidden text-3xl">&#9776;</button>
   </div>
-      </div>
-    </div> 
+</nav>
 
-    <!-- Bagian bawah -->
-    <div class="mt-12 flex flex-col md:flex-row justify-between items-center text-xs text-white border-t border-gray-200 pt-6">
-      <p>© 2025 Your Marketplace. All Rights Reserved.</p>
-      <a href="#" class="mt-2 md:mt-0 hover:underline hover:text-black">Privacy Policy</a>
+<!-- HERO -->
+<!-- FAQ SECTION -->
+ 
+<!-- FAQ SECTION -->
+<div class="space-y-4">
+  <section class="px-8 py-12 bg-[#FDFBCF] border-b border-gray-300">
+
+  <!-- C -->
+  <div class="border-b pb-4">
+    <button class="w-full flex justify-between items-center faq-btn">
+      <span class="font-medium">Bagaimana cara menghubungi customer service?</span>
+      <span class="text-2xl">+</span>
+    </button>
+    <p class="faq-content hidden mt-2 text-gray-600">
+      Kamu bisa menghubungi customer service kami melalui menu “Kontak”, atau langsung lewat email resmi:
+      <br><strong>support@marketplace.com</strong><br><br>
+      Kami biasanya membalas dalam waktu maksimal 24 jam.
+    </p>
+  </div>
+
+  <!-- D -->
+  <div class="border-b pb-4">
+    <button class="w-full flex justify-between items-center faq-btn">
+      <span class="font-medium">Apakah informasi pribadi saya aman?</span>
+      <span class="text-2xl">+</span>
+    </button>
+    <p class="faq-content hidden mt-2 text-gray-600">
+      Ya, informasi pribadi kamu aman. Kami menggunakan standar keamanan modern dan tidak membagikan
+      atau menjual data pengunjung ke pihak mana pun. Semua data diproses secara privat dan terenkripsi.
+    </p>
+  </div>
+
+  <!-- E -->
+  <div class="border-b pb-4">
+    <button class="w-full flex justify-between items-center faq-btn">
+      <span class="font-medium">Bagaimana cara menambahkan produk ke keranjang?</span>
+      <span class="text-2xl">+</span>
+    </button>
+    <p class="faq-content hidden mt-2 text-gray-600">
+      Cukup pilih produk yang ingin kamu beli, lalu klik tombol “Tambah ke Keranjang”.
+      Setelah itu, produk akan otomatis muncul di daftar keranjang belanja kamu.
+    </p>
+  </div>
+
+  <!-- F -->
+  <div class="border-b pb-4">
+    <button class="w-full flex justify-between items-center faq-btn">
+      <span class="font-medium">Apakah website ini gratis digunakan?</span>
+      <span class="text-2xl">+</span>
+    </button>
+    <p class="faq-content hidden mt-2 text-gray-600">
+      Tentu! Website ini sepenuhnya gratis digunakan. Kamu bisa menjelajah, melihat produk, dan menggunakan
+      semua fitur utama tanpa biaya apa pun.
+    </p>
+  </div>
+
+  <!-- G -->
+  <div class="border-b pb-4">
+    <button class="w-full flex justify-between items-center faq-btn">
+      <span class="font-medium">Apakah produk di sini asli semua?</span>
+      <span class="text-2xl">+</span>
+    </button>
+    <p class="faq-content hidden mt-2 text-gray-600">
+      Iya dong! Semua produk yang tampil di sini sudah dicek dulu oleh admin, jadi aman dan terpercaya.
+    </p>
+  </div>
+
+  <!-- H -->
+  <div class="border-b pb-4">
+    <button class="w-full flex justify-between items-center faq-btn">
+      <span class="font-medium">Kalau barang yang aku mau habis, bisa restock nggak?</span>
+      <span class="text-2xl">+</span>
+    </button>
+    <p class="faq-content hidden mt-2 text-gray-600">
+      Bisa banget! Biasanya restock butuh waktu beberapa hari. Kamu bisa cek lagi nanti atau hubungi kami
+      biar dikasih info kalau sudah tersedia.
+    </p>
+  </div>
+
+  <!-- I -->
+  <div class="border-b pb-4">
+    <button class="w-full flex justify-between items-center faq-btn">
+      <span class="font-medium">Apakah bisa COD (bayar di tempat)?</span>
+      <span class="text-2xl">+</span>
+    </button>
+    <p class="faq-content hidden mt-2 text-gray-600">
+      Untuk saat ini belum bisa, tapi kami sedang mempertimbangkannya. Pembayaran sementara hanya melalui
+      metode yang tersedia, ya!
+    </p>
+  </div>
+
+  <!-- J -->
+  <div class="border-b pb-4">
+    <button class="w-full flex justify-between items-center faq-btn">
+      <span class="font-medium">Bisa cancel pesanan nggak?</span>
+      <span class="text-2xl">+</span>
+    </button>
+    <p class="faq-content hidden mt-2 text-gray-600">
+      Bisa, selama barang belum dikemas. Kalau sudah masuk proses pengiriman, sayangnya pesanan tidak bisa dibatalkan.
+    </p>
+  </div>
+
+  <!-- K -->
+  <div class="border-b pb-4">
+    <button class="w-full flex justify-between items-center faq-btn">
+      <span class="font-medium">Pengiriman biasanya butuh berapa lama?</span>
+      <span class="text-2xl">+</span>
+    </button>
+    <p class="faq-content hidden mt-2 text-gray-600">
+      Tergantung lokasi kamu. Rata-rata 2–4 hari kerja jika masih dalam satu negara.
+      Bisa lebih cepat kalau lokasinya dekat.
+    </p>
+  </div>
+
+</div><script>
+  const faqButtons = document.querySelectorAll(".faq-btn");
+
+  faqButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      const sign = btn.querySelector("span:last-child");
+
+      if (content.classList.contains("hidden")) {
+        content.classList.remove("hidden");
+        sign.textContent = "−";
+      } else {
+        content.classList.add("hidden");
+        sign.textContent = "+";
+      }
+    });
+  });
+</script>
+<!-- FOOTER -->
+ 
+<footer class="bg-[#4a4830] text-gray-200 py-12">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- Branding / About -->
+      <div class="flex flex-col items-center gap-2">
+  <img src="img/SALOKA LOGO.png" class="w-19 h-16">
+      <h2 class="text-xl font-semibold mb-4 text-white">Saloka.</h2>
+      <p class="text-sm leading-relaxed text-gray-300">
+        Lapar adalah masa lalu, kenyang adalah yang terpenting, disini kami selalu ada agar itu tercapai.
+      </p>
     </div>
+
+    <!-- Navigasi Cepat -->
+    <div>
+      <h3 class="text-lg font-medium mb-4 text-white">Tautan Cepat</h3>
+      <ul class="space-y-2">
+        <li><a href="Marketpalce.html" class="hover:text-white text-gray-300">Produk</a></li>
+        <li><a href="AboutUs.html" class="hover:text-white text-gray-300">Tentang Kami</a></li>
+      </ul>
+    </div>
+
+    <!-- Kontak -->
+    <div>
+      <h3 class="text-lg font-medium mb-4 text-white">Kontak</h3>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li>Jl. No. 123, Malang, Indonesia</li>
+        <li>Email: <a href="mailto:Saloka123@gmail.com" class="hover:text-white">Saloka123@gmail.com</a></li>
+        <li>Telepon: +62 812-3456-7890</li>
+      </ul>
+    </div>
+
+    <!-- Sosial Media + CTA -->
+    <div>
+      <h3 class="text-lg font-medium mb-4 text-white">Ikuti Kami</h3>
+      <div class="flex space-x-4 mb-6">
+        <!-- Contoh ikon: bisa replace dengan SVG real sosial media -->
+        <a href="#" class="text-gray-400 hover:text-white">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <!-- icon FB misalnya -->
+            <path d="M22 12c0-5.522-4.478-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.988H7.898v-2.89h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.463h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <!-- icon Twitter -->
+            <path d="M23 3a10.9 10.9 0 0 1-3.14.86A4.48 4.48 0 0 0 22.43.36a9.1 9.1 0 0 1-2.89 1.1 4.52 4.52 0 0 0-7.7 4.12 12.84 12.84 0 0 1-9.3-4.72 4.52 4.52 0 0 0 1.4 6.03 4.42 4.42 0 0 1-2.05-.57v.06a4.52 4.52 0 0 0 3.63 4.43 4.52 4.52 0 0 1-2.04.08 4.52 4.52 0 0 0 4.22 3.13A9.07 9.07 0 0 1 1 19.54 12.78 12.78 0 0 0 6.92 21c8.3 0 12.84-6.88 12.84-12.84 0-.2 0-.42-.02-.62A9.2 9.2 0 0 0 23 3z"/>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <!-- icon Instagram -->
+            <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm4.75-.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+          </svg>
+        </a>
+      </div>
+
+      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        class="text-sm bg-[#252e15] text-white px-3 py-1 rounded hover:bg-blue-500">
+        Kembali ke Atas
+      </button>
+    </div>
+  </div>
+
+  <div class="border-t border-black-700 mt-8"></div>
+
+  <div class="mt-6 text-center text-xs text-white-500">
+    &copy; 2025 Saloka. Hak cipta dilindungi.
   </div>
 </footer>
+
+</body>
+</html>

@@ -5,288 +5,381 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>PRODUCTS</title>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const homeLink = document.getElementById('home-link');
-        const productsLink = document.getElementById('products-link');
-        const aboutLink = document.getElementById('about-link');
-        const indicator = document.getElementById('nav-indicator');
-
-        function updateIndicator(activeLink) {
-          const rect = activeLink.getBoundingClientRect();
-          const navRect = activeLink.parentElement.getBoundingClientRect();
-          indicator.style.width = rect.width + 'px';
-          indicator.style.height = rect.height + 'px';
-          indicator.style.left = (rect.left - navRect.left) + 'px';
-          indicator.style.top = (rect.top - navRect.top) + 'px';
-        }
-
-        // Set initial position for Products
-        updateIndicator(productsLink);
-
-        homeLink.addEventListener('click', function(e) {
-          e.preventDefault();
-          updateIndicator(homeLink);
-          // Navigate after animation
-          setTimeout(() => {
-            window.location.href = 'index.html';
-          }, 300);
-        });
-
-        productsLink.addEventListener('click', function(e) {
-          e.preventDefault();
-          updateIndicator(productsLink);
-        });
-
-        aboutLink.addEventListener('click', function(e) {
-          e.preventDefault();
-          updateIndicator(aboutLink);
-        });
-      });
-    </script>
-</head>
-<body>
+  <head>
     <!-- HEADER -->
-    <!-- Navbar -->
-    <nav class="flex items-center gap-8 text-sm font-medium">
-  
-    </nav>
+    <!-- NAVBAR -->
+<nav class="w-full z-50 bg-white/70 backdrop-blur-md border-b border-gray-200">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
 
-    <header class="flex justify-between items-center px-8 py-4 bg-[#fff2d6] shadow-sm">
+    <!-- Logo -->
     <div class="flex items-center gap-2">
-      <img src="img/LOGOOOO SALOKA.png" alt="logo" class="w-40 h-16">
-      
-    </div>
-    <nav class="relative flex items-center gap-8 text-lg font-medium">
-      <a id="home-link" href="index.html" class="text-black hover:text-gray-700 px-3 py-1 z-10 relative">Home</a>
-      <a id="products-link" href="Marketpalce.html" class="text-black hover:text-gray-700 px-3 py-1 z-10 relative">Products</a>
-      <a id="about-link" href="#" class="text-black hover:text-gray-700 px-3 py-1 z-10 relative">About Us</a>
-      <div id="nav-indicator" class="absolute bg-[#DAA520] rounded-full transition-all duration-300 ease-in-out"></div>
-    </nav>
-    <div class="flex items-center gap-4">
-      <input type="text" placeholder="Search" class="border border-gray-300 rounded-full px-3 py-1 text-sm focus:outline-none bg-white" />
-      <button class="text-gray-600 hover:text-yellow-600">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18M3 12h18M3 21h18" />
-        </svg>
+  <img src="img/SALOKA LOGO.png" class="w-18 h-16" alt="Logo">
+  <h1 class="text-4xl font-bold">Saloka.</h1>
+</div>
+
+    <!-- Navigation Links -->
+    <ul class="hidden md:flex space-x-4 text-gray-700 font-medium">
+      <li><a href="index.html" class="hover:text-black">Home</a></li>
+      <li><a href="Marketpalce.html" class="hover:text-black">Produk</a></li>
+      <li><a href="AboutUs.html" class="hover:text-black">Tentang Kami</a></li>
+    </ul>
+
+    <!-- Buttons -->
+    <div class="hidden md:flex space-x-3">
+      <button class="px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-100">Sign In</button>
+      <button class="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-900">
+        Contact
       </button>
     </div>
 
-     
 
-    <!-- Search + Icons -->
-    <div class="flex items-center gap-4">
-      
+    <!-- Mobile Menu Toggle -->
+    <button class="md:hidden text-3xl">&#9776;</button>
 
+  </div>
+</nav>
 
-      <!-- Icons -->
-      <div class="flex items-center gap-4 text-gray-600">
-        <!-- Notification -->
-        <button class="relative hover:text-yellow-500 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 17h5l-1.405-1.405C18.21 14.79 18 13.918 18 13V9a6 6 0 00-9.33-4.972" />
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 17h5m0 0a3 3 0 006 0m-6 0H4" />
-          </svg>
-          <span class="absolute -top-1 -right-1 bg-red-500 text-white text-[10px] px-1 rounded-full">3</span>
-        </button>
-
-        <!-- Cart -->
-        <button class="relative hover:text-yellow-500 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.6 8h13.2L17 13M7 13h10" />
-          </svg>
-          <span class="absolute -top-1 -right-1 bg-yellow-400 text-white text-[10px] px-1 rounded-full">2</span>
-        </button>
-
-        <!-- Profile -->
-        <button class="hover:text-yellow-500 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 12c2.485 0 4.5-2.015 4.5-4.5S14.485 3 12 3 7.5 5.015 7.5 7.5 9.515 12 12 12zm0 1.5c-3.315 0-6 2.238-6 5.002V21h12v-2.498c0-2.764-2.685-5.002-6-5.002z" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </header>
 <!-- HERO -->
- <section>
-  <div style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+ 
+  <div class="relative max-w-7xl mx-auto px-6 text-white mt-24">
+<section> 
+  
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing - Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <h2 style="font-family: Arial, sans-serif; font-size: 2em; color: #333; margin-bottom: 5px;">
-        Arsip: Saloka Rasa Lokal
-    </h2>
-    <p style="font-size: 0.9em; color: #666; margin-bottom: 20px;">
-        Menampilkan 6 produk dari 6 total hasil.
-    </p>
+    <style>
+      
+        /* CSS Tambahan untuk penyesuaian rating bintang */
+        .stars {
+            color: orange;
+            letter-spacing: -1px;
+        }
+        /* Kelas utilitas kustom untuk warna latar belakang terang */
+        .bg-custom-yellow {
+             background-color: #fce38a; /* Contoh warna kuning yang mirip */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 p-8">
+  
 
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-
-        <aside style="width: 250px; padding: 20px; background-color: #ffffff; border: 1px solid #e7e7e7; border-radius: 4px; margin-right: 30px;">
+    <div class="max-w-7xl mx-auto bg-[#FDFBCF] rounded-lg shadow-lg flex">
+        
+        <aside class="w-64 p-6 border-r border-gray-200">
             
-            <h3 style="font-size: 1.2em; color: #333; border-bottom: 1px solid #ddd; padding-bottom: 10px; margin-top: 0;">
-                Filter Produk
-            </h3>
+            <div class="mb-6">
+                <h3 class="text-[#4a4830] font-bold mb-3">Product Categories</h3>
+                <div class="space-y-2 text-sm text-gray-700">
+                    <label class="flex items-center"><input type="checkbox" class="mr-2 rounded text-blue-600"> Pedas</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2 rounded text-blue-600"> Manis</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2 rounded text-blue-600"> Asin</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2 rounded text-blue-600"> Gurih</label>
+                    
+                </div>
+            </div>
             
-            <div style="margin-bottom: 20px;">
-                <h4 style="font-size: 1em; color: #555; margin-bottom: 10px;">Filter berdasarkan Harga</h4>
-                <input type="number" value="10000" style="width: 60px; padding: 5px; border: 1px solid #ccc;">
-                <span style="margin: 0 5px;">-</span>
-                <input type="number" value="50000" style="width: 60px; padding: 5px; border: 1px solid #ccc;">
-                <button style="padding: 5px 10px; background-color: #f7a040; color: white; border: none; cursor: pointer;">Filter</button>
+            <div class="mb-6 pt-4 border-t border-gray-200">
+                <h3 class="text-[#4a4830] font-bold mb-3">Filter Harga</h3>
+               <div class="text-[#4a4830] font-semibold">  Rp. 1.000 - Rp. 12.000</div>
+                <div class="h-1 bg-gray-300 rounded-full relative">
+                    <div class="absolute h-1 bg-gray-500 rounded-full" style="width: 50%;"></div>
+                </div>
             </div>
-
-            <div style="margin-bottom: 20px;">
-                <h4 style="font-size: 1em; color: #555; margin-bottom: 10px;">Filter berdasarkan Rasa</h4>
-                <div style="margin-bottom: 5px;"><input type="checkbox"> Manis (4)</div>
-                <div style="margin-bottom: 5px;"><input type="checkbox"> Gurih (3)</div>
-                <div style="margin-bottom: 5px;"><input type="checkbox"> Pedas (2)</div>
-                <div style="margin-bottom: 5px;"><input type="checkbox"> Tradisional (6)</div>
+            
+            <div class="mb-6 pt-4 border-t border-gray-200">
+                <h3 class="text-[#4a4830] font-bold mb-3">Rating</h3>
+                <div class="space-y-2 text-sm text-gray-700">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="mr-2 rounded text-blue-600"> 
+                        <span class="stars">★★★★★</span> (12)
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="mr-2 rounded text-blue-600"> 
+                        <span class="stars">★★★★☆</span> (0)
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="mr-2 rounded text-blue-600"> 
+                        <span class="stars">★★★☆☆</span> ()
+                    </label>
+                </div>
             </div>
-
-            <div style="margin-bottom: 20px;">
-                <h4 style="font-size: 1em; color: #555; margin-bottom: 10px;">Filter berdasarkan Rating</h4>
-                <div style="margin-bottom: 5px;"><input type="checkbox"> ⭐⭐⭐⭐⭐ (6)</div>
-                <div style="margin-bottom: 5px;"><input type="checkbox"> ⭐⭐⭐⭐ (0)</div>
-                <div style="margin-bottom: 5px;"><input type="checkbox"> ⭐⭐⭐ (0)</div>
+            
+            <div class="pt-4 border-t border-gray-200">
+                <h3 class="text-[#4a4830] font-bold mb-3">Brands</h3>
+                <div class="space-y-2 text-sm text-gray-700">
+                    <label class="flex items-center"><input type="checkbox" class="mr-2 rounded text-blue-600"> Paling banyak dibeli minggu ini</label>
+                    <label class="flex items-center"><input type="checkbox" class="mr-2 rounded text-blue-600"> Promo</label>
+              
             </div>
-
         </aside>
 
-        <div style="flex-grow: 1;">
-            
-            <div style="display: flex; justify-content: space-between; align-items: center; border: 1px solid #ddd; padding: 10px; margin-bottom: 20px; background-color: #f9f9f9;">
-                <div style="font-size: 0.9em; color: #666;">
-                    Menampilkan 1-6 dari 6 produk
-                </div>
-                <div style="font-size: 0.9em;">
-                    Urutkan: 
-                    <select style="padding: 5px;">
-                        <option>Default sorting</option>
-                        <option>Harga terendah</option>
-                        <option>Terpopuler</option>
-                    </select>
-                </div>
-            </div>
+        <main class="flex-1 p-6">
+            <div class="grid grid-cols-3 gap-6">
+                
+                <div class="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                    <div class="relative h-48">
+                        <img src="img/Kripik tempe.jpg" alt="Kripik tempe" class="w-full h-full object-cover">
+                        <i class="far fa-heart absolute top-3 right-3 text-white text-xl bg-black bg-opacity-40 p-2 rounded-full cursor-pointer"></i>
+                    </div>
+                    <div class="p-3">
+                       <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Keripik Tempe</h4>
 
-            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
-                
-                <div class="product-card" style="border: 1px solid #eee; padding: 10px; text-align: center; background-color: white;">
-                    <img src="img/Kripik tempe.jpg" alt="Kripik tempe" style="width: 100%; height: 180px; object-fit: cover; margin-bottom: 10px; border-radius: 3px;">
-                    <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Keripik tempe</h4>
-                    <div style="color: gold; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
-                    <p style="font-size: 1.2em; font-weight: bold; color: #d64d00;">Rp. 5.000</p>
-                    <button style="padding: 8px 15px; background-color: #f7a040; color: white; border: none; cursor: pointer; border-radius: 3px;">Tambah ke Keranjang</button>
+                        <div class="flex items-center text-sm mb-1 text-gray-600">
+                            <span class="stars mr-1">★★★★★</span> (10)
+                        </div>
+                        <p class="text-lg font-bold text-gray-800">Rp. 12.000</p>
+                    </div>
                 </div>
                 
-                <div class="product-card" style="border: 1px solid #eee; padding: 10px; text-align: center; background-color: white;">
-                    <img src="img/Kue Pukis.jpg" alt="Kue Pukis" style="width: 100%; height: 180px; object-fit: cover; margin-bottom: 10px; border-radius: 3px;">
-                    <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Kue Pukis</h4>
-                    <div style="color: gold; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
-                    <p style="font-size: 1.2em; font-weight: bold; color: #d64d00;">Rp. 5.000</p>
-                    <button style="padding: 8px 15px; background-color: #f7a040; color: white; border: none; cursor: pointer; border-radius: 3px;">Tambah ke Keranjang</button>
+                <div class="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                    <div class="relative h-48 bg-custom-yellow flex items-center justify-center">
+                       <img src="img/Kue Pukis.jpg" alt=" Pukis" class="w-full h-full object-cover">
+                        <i class="far fa-heart absolute top-3 right-3 text-white text-xl bg-black bg-opacity-40 p-2 rounded-full cursor-pointer"></i>
+                    </div>
+                    <div class="p-3">
+                       <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Pukis</h4>
+>
+                        <div class="flex items-center text-sm mb-1 text-gray-600">
+                            <span class="stars mr-1">★★★★★</span> (10)
+                        </div>
+                        <p class="text-lg font-bold text-gray-800">Rp. 5.000</p>
+                    </div>
                 </div>
+                
+                 <div class="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                    <div class="relative h-48 bg-custom-yellow flex items-center justify-center">
+                 <img src="img/Jenang suran.jpg" alt="Jenang suran" class="w-full h-full object-cover">
+                        <i class="far fa-heart absolute top-3 right-3 text-white text-xl bg-black bg-opacity-40 p-2 rounded-full cursor-pointer"></i>
+                    </div>
+                    <div class="p-3">
+                       <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Jenang Suran</h4>
 
-                <div class="product-card" style="border: 1px solid #eee; padding: 10px; text-align: center; background-color: white;">
-                    <img src="img/Jenang suran.jpg" alt="Jenang suran" style="width: 100%; height: 180px; object-fit: cover; margin-bottom: 10px; border-radius: 3px;">
-                    <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Jenang suran</h4>
-                    <div style="color: gold; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
-                    <p style="font-size: 1.2em; font-weight: bold; color: #d64d00;">Rp. 12.000</p>
-                    <button style="padding: 8px 15px; background-color: #f7a040; color: white; border: none; cursor: pointer; border-radius: 3px;">Tambah ke Keranjang</button>
-                </div>
+                        <div class="flex items-center text-sm mb-1 text-gray-600">
+                            <span class="stars mr-1">★★★★★</span> (10)
+                        </div>
+                        <p class="text-lg font-bold text-gray-800">Rp. 10.000</p>
+                   
+                    </div>
+                     </div>
                 
-                <div class="product-card" style="border: 1px solid #eee; padding: 10px; text-align: center; background-color: white;">
-                    <img src="img/Cireng.jpg" alt="Cireng" style="width: 100%; height: 180px; object-fit: cover; margin-bottom: 10px; border-radius: 3px;">
-                    <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Cireng</h4>
-                    <div style="color: gold; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
-                    <p style="font-size: 1.2em; font-weight: bold; color: #d64d00;">Rp. 6.000</p>
-                    <button style="padding: 8px 15px; background-color: #f7a040; color: white; border: none; cursor: pointer; border-radius: 3px;">Tambah ke Keranjang</button>
-                </div>
+                 <div class="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                    <div class="relative h-48 bg-custom-yellow flex items-center justify-center">
+                 <img src="img/Martabak Manis.jpg" alt="Martabak manis" class="w-full h-full object-cover">
+                        <i class="far fa-heart absolute top-3 right-3 text-white text-xl bg-black bg-opacity-40 p-2 rounded-full cursor-pointer"></i>
+                    </div>
+                    <div class="p-3">
+                        <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Martabak Manis</h4>
+
+                        <div class="flex items-center text-sm mb-1 text-gray-600">
+                            <span class="stars mr-1">★★★★★</span> (10)
+                        </div>
+                        <p class="text-lg font-bold text-gray-800">Rp. 12.000</p>
+                    </div>
+                     </div> 
+                        
                 
-                </div>
-                  <div class="product-card" style="border: 1px solid #eee; padding: 10px; text-align: center; background-color: white;">
-                    <img src="img/Martabak Manis.jpg" alt="Martabak Manis" style="width: 100%; height: 180px; object-fit: cover; margin-bottom: 10px; border-radius: 3px;">
-                    <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Martabak Manis</h4>
-                    <div style="color: gold; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
-                    <p style="font-size: 1.2em; font-weight: bold; color: #d64d00;">Rp. 10.000</p>
-                    <button style="padding: 8px 15px; background-color: #f7a040; color: white; border: none; cursor: pointer; border-radius: 3px;">Tambah ke Keranjang</button>
-                </div>
-                  <div class="product-card" style="border: 1px solid #eee; padding: 10px; text-align: center; background-color: white;">
-                    <img src="img/O, dat ding.jpg" alt="Odading" style="width: 100%; height: 180px; object-fit: cover; margin-bottom: 10px; border-radius: 3px;">
-                    <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Odading</h4>
-                    <div style="color: gold; margin-bottom: 5px;">⭐⭐⭐⭐⭐</div>
-                    <p style="font-size: 1.2em; font-weight: bold; color: #d64d00;">Rp. 3.000</p>
-                    <button style="padding: 8px 15px; background-color: #f7a040; color: white; border: none; cursor: pointer; border-radius: 3px;">Tambah ke Keranjang</button>
-                </div>
-            
-            <div style="text-align: center; margin-top: 40px;">
-                <button style="padding: 10px 30px; background-color: #fff; color: #f7a040; border: 1px solid #f7a040; cursor: pointer; border-radius: 4px; font-weight: bold;">Muat Lebih Banyak Produk</button>
-            </div>
-            
-        </div>
-        
+                 <div class="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                    <div class="relative h-48 bg-custom-yellow flex items-center justify-center">
+                 <img src="img/Cireng.jpg" alt="Cireng" class="w-full h-full object-cover">
+                        <i class="far fa-heart absolute top-3 right-3 text-white text-xl bg-black bg-opacity-40 p-2 rounded-full cursor-pointer"></i>
+                    </div>
+                    <div class="p-3">
+                        <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Cireng</h4>
+
+                        <div class="flex items-center text-sm mb-1 text-gray-600">
+                            <span class="stars mr-1">★★★★★</span> (10)
+                        </div>
+                        <p class="text-lg font-bold text-gray-800">Rp. 7.000</p>
+                    </div>
+                      </div>
+
+                          
+                
+                 <div class="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                    <div class="relative h-48 bg-custom-yellow flex items-center justify-center">
+                 <img src="img/O, dat ding.jpg" alt="Odading" class="w-full h-full object-cover">
+                        <i class="far fa-heart absolute top-3 right-3 text-white text-xl bg-black bg-opacity-40 p-2 rounded-full cursor-pointer"></i>
+                    </div>
+                    <div class="p-3">
+                       <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Odading</h4>
+
+                        <div class="flex items-center text-sm mb-1 text-gray-600">
+                            <span class="stars mr-1">★★★★★</span> (10)
+                        </div>
+                        <p class="text-lg font-bold text-gray-800">Rp. 5.000</p>
+                    </div>
+                         </div>
+                
+                 <div class="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                    <div class="relative h-48 bg-custom-yellow flex items-center justify-center">
+                 <img src="img/10.jpg" alt="Geti" class="w-full h-full object-cover">
+                        <i class="far fa-heart absolute top-3 right-3 text-white text-xl bg-black bg-opacity-40 p-2 rounded-full cursor-pointer"></i>
+                    </div>
+                    <div class="p-3">
+                        <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Geti (Getuk Kacang)</h4>
+
+                        <div class="flex items-center text-sm mb-1 text-gray-600">
+                            <span class="stars mr-1">★★★★★</span> (10)
+                        </div>
+                        <p class="text-lg font-bold text-gray-800">Rp. 10.000</p>
+                    </div>
+                         </div>
+                
+                 <div class="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                    <div class="relative h-48 bg-custom-yellow flex items-center justify-center">
+                 <img src="img/4.jpg" alt="Lanting" class="w-full h-full object-cover">
+                        <i class="far fa-heart absolute top-3 right-3 text-white text-xl bg-black bg-opacity-40 p-2 rounded-full cursor-pointer"></i>
+                    </div>
+                    <div class="p-3">
+                        <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Lanting</h4>
+
+                        <div class="flex items-center text-sm mb-1 text-gray-600">
+                            <span class="stars mr-1">★★★★★</span> (10)
+                        </div>
+                        <p class="text-lg font-bold text-gray-800">Rp. 12.000</p>
+                    </div>
+                         </div>
+                
+                 <div class="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                    <div class="relative h-48 bg-custom-yellow flex items-center justify-center">
+                 <img src="img/6.jpg" alt="Sambel pecel" class="w-full h-full object-cover">
+                        <i class="far fa-heart absolute top-3 right-3 text-white text-xl bg-black bg-opacity-40 p-2 rounded-full cursor-pointer"></i>
+                    </div>
+                    <div class="p-3">
+                       <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Sambel Pecel</h4>
+
+                        <div class="flex items-center text-sm mb-1 text-gray-600">
+                            <span class="stars mr-1">★★★★★</span> (10)
+                        </div>
+                        <p class="text-lg font-bold text-gray-800">Rp. 12.000</p>
+                    </div>
+                         </div>
+                
+                 <div class="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                    <div class="relative h-48 bg-custom-yellow flex items-center justify-center">
+                 <img src="img/8.jpg" alt="Kripik ubi ungu" class="w-full h-full object-cover">
+                        <i class="far fa-heart absolute top-3 right-3 text-white text-xl bg-black bg-opacity-40 p-2 rounded-full cursor-pointer"></i>
+                    </div>
+                    <div class="p-3">
+                    <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Keripik Ubi Ungu</h4>
+
+                        <div class="flex items-center text-sm mb-1 text-gray-600">
+                            <span class="stars mr-1">★★★★★</span> (10)
+                        </div>
+                        <p class="text-lg font-bold text-gray-800">Rp. 20.000</p>
+                    </div>
+                         </div>
+                
+                 <div class="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                    <div class="relative h-48 bg-custom-yellow flex items-center justify-center">
+                 <img src="img/5.jpg" alt="Krupuk kulit Rambak" class="w-full h-full object-cover">
+                        <i class="far fa-heart absolute top-3 right-3 text-white text-xl bg-black bg-opacity-40 p-2 rounded-full cursor-pointer"></i>
+                    </div>
+                    <div class="p-3">
+                     <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Kerupuk Kulit (Rambak)</h4>
+
+                        <div class="flex items-center text-sm mb-1 text-gray-600">
+                            <span class="stars mr-1">★★★★★</span> (10)
+                        </div>
+                        <p class="text-lg font-bold text-gray-800">Rp. 30.000</p>
+                    </div>
+                         </div>
+                
+                 <div class="bg-white rounded-lg overflow-hidden border border-gray-200 shadow-sm">
+                    <div class="relative h-48 bg-custom-yellow flex items-center justify-center">
+                 <img src="img/7.jpg" alt="Kue carang mas" class="w-full h-full object-cover">
+                        <i class="far fa-heart absolute top-3 right-3 text-white text-xl bg-black bg-opacity-40 p-2 rounded-full cursor-pointer"></i>
+                    </div>
+                    <div class="p-3">
+                     <h4 style="font-size: 1.1em; margin: 5px 0; color: #333;">Kue Carang Mas </h4>
+
+                        <div class="flex items-center text-sm mb-1 text-gray-600">
+                            <span class="stars mr-1">★★★★★</span> (10)
+                        </div>
+                        <p class="text-lg font-bold text-gray-800">Rp. 12.000</p>
+                    </div>
+
+
+
+</section>
+
+
+<!-- FOOTER -->
+ 
+<footer class="bg-[#4a4830] text-gray-200 py-12">
+  <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <!-- Branding / About -->
+      <div class="flex flex-col items-center gap-2">
+  <img src="img/SALOKA LOGO.png" class="w-19 h-16">
+      <h2 class="text-xl font-semibold mb-4 text-white">Saloka.</h2>
+      <p class="text-sm leading-relaxed text-gray-300">
+        Lapar adalah masa lalu, kenyang adalah yang terpenting, disini kami selalu ada agar itu tercapai.
+      </p>
     </div>
-</div>
- </section>
 
-  <!-- FOOTER -->
- <footer class="bg-[#DAA520] border-t border-gray-200 text-[#4C4334] py-12 px-6 md:px-16 font-['Playfair_Display']">
-  <div class="max-w-7xl mx-auto">
-    <!-- Bagian atas: newsletter -->
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-12">
-      <div>
-        <h2 class="text-2xl font-bold">Lapar adalah masa lalu. Pesan sekarang, nikmati kebahagiaan secepat kilat<br>Cita rasa terbaik sudah menanti Anda</h2>
-      </div>
-      <div class="flex items-center mt-6 md:mt-0 space-x-2"> 
-      </div>
-      <a href="#" class="hidden md:block text-sm text-white hover:text-black">KEMBALI KE ATAS ↑</a>
+    <!-- Navigasi Cepat -->
+    <div>
+      <h3 class="text-lg font-medium mb-4 text-white">Tautan Cepat</h3>
+      <ul class="space-y-2">
+        <li><a href="Marketpalce.html" class="hover:text-white text-gray-300">Produk</a></li>
+        <li><a href="AboutUs.html" class="hover:text-white text-gray-300">Tentang Kami</a></li>
+      </ul>
     </div>
 
-    <!-- Bagian tengah: alamat & link -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-20px">
-      <div>
-        <h3 class="font-bold mb-3">HUBUNGI KAMI</h3>
-        <p>+62 831 990 1000</p>
-        <p>Saloka231@gmail.com </p>
+    <!-- Kontak -->
+    <div>
+      <h3 class="text-lg font-medium mb-4 text-white">Kontak</h3>
+      <ul class="space-y-2 text-sm text-gray-300">
+        <li>Jl. No. 123, Malang, Indonesia</li>
+        <li>Email: <a href="mailto:Saloka123@gmail.com" class="hover:text-white">Saloka123@gmail.com</a></li>
+        <li>Telepon: +62 812-3456-7890</li>
+      </ul>
+    </div>
+
+    <!-- Sosial Media + CTA -->
+    <div>
+      <h3 class="text-lg font-medium mb-4 text-white">Ikuti Kami</h3>
+      <div class="flex space-x-4 mb-6">
+        <!-- Contoh ikon: bisa replace dengan SVG real sosial media -->
+        <a href="#" class="text-gray-400 hover:text-white">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <!-- icon FB misalnya -->
+            <path d="M22 12c0-5.522-4.478-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.988H7.898v-2.89h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.463h-1.26c-1.243 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <!-- icon Twitter -->
+            <path d="M23 3a10.9 10.9 0 0 1-3.14.86A4.48 4.48 0 0 0 22.43.36a9.1 9.1 0 0 1-2.89 1.1 4.52 4.52 0 0 0-7.7 4.12 12.84 12.84 0 0 1-9.3-4.72 4.52 4.52 0 0 0 1.4 6.03 4.42 4.42 0 0 1-2.05-.57v.06a4.52 4.52 0 0 0 3.63 4.43 4.52 4.52 0 0 1-2.04.08 4.52 4.52 0 0 0 4.22 3.13A9.07 9.07 0 0 1 1 19.54 12.78 12.78 0 0 0 6.92 21c8.3 0 12.84-6.88 12.84-12.84 0-.2 0-.42-.02-.62A9.2 9.2 0 0 0 23 3z"/>
+          </svg>
+        </a>
+        <a href="#" class="text-gray-400 hover:text-white">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <!-- icon Instagram -->
+            <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3h10zm-5 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zm4.75-.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
+          </svg>
+        </a>
       </div>
 
-      <div>
-        <h3 class="font-semibold mb-2">TULUNGAGUNG</h3>
-        <h3 class="font-semibold mb-2">MALANG</h3>
-        <h3 class="font-semibold mb-2">SURABAYA</h3>
-        <h3 class="font-semibold mb-2">KEDIRI</h3>
-      </div>
-
-      <div>
-        <h3 class="font-semibold mb-2">NAVIGASI</h3>
-        <ul class="space-y-1">
-          <li><a href="Marketpalce.html" class="hover:underline hover:text-black">Products</a></li>
-          <li><a href="#" class="hover:underline hover:text-black">Shop</a></li>
-          <li><a href="#" class="hover:underline hover:text-black"></a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h3 class="font-semibold mb-2">FOLLOW US</h3>
-        <div class="flex space-x-4">
-    </a>
-    <a href="#" title="Facebook">
-      <img src="img/facebook-removebg-preview.png" alt="Facebook" class="w-8 h-8 mb-8 hover:scale-110 transition-transform duration-200 filter brightness-0">
-    </a>
-    <a href="#" title="YouTube">
-      <img src="img/youtube-removebg-preview.png" alt="YouTube" class="w-9 h-6 mt-1.5 hover:scale-110 transition-transform duration-200 filter brightness-0">
-    </a>
+      <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        class="text-sm bg-[#252e15] text-white px-3 py-1 rounded hover:bg-blue-500">
+        Kembali ke Atas
+      </button>
+    </div>
   </div>
-      </div>
-    </div> 
 
-    <!-- Bagian bawah -->
-    <div class="mt-12 flex flex-col md:flex-row justify-between items-center text-xs text-white border-t border-gray-200 pt-6">
-      <p>© 2025 Your Marketplace. All Rights Reserved.</p>
-      <a href="#" class="mt-2 md:mt-0 hover:underline hover:text-black">Privacy Policy</a>
-    </div>
+  <div class="border-t border-black-700 mt-8"></div>
+
+  <div class="mt-6 text-center text-xs text-white-500">
+    &copy; 2025 Saloka. Hak cipta dilindungi.
   </div>
 </footer>
-
-
 
 </body>
 </html>
